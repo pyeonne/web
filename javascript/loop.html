@@ -27,7 +27,12 @@
 
         <h1>Array + Loop</h1>
         <script>
-            topics.map(item => document.write('<li>' + item + '</li>'));
+            topics.map(item => document.write(`<li>${item}</li>`));
+        </script>
+
+        <script>
+            let topics2 = ['html', 'css', 'js'];
+            topics2.map(e => console.log(e));
         </script>
     </body>
 </html>

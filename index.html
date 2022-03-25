@@ -29,6 +29,23 @@
         </script>
     </head>
     <body>
+        <script>
+            function night() {
+                document.querySelector('body').style.backgroundColor = 'black';
+                document.querySelector('body').style.color = 'white';
+                document.querySelectorAll('a').forEach(item => {
+                    item.style.color = 'white';
+                });
+            }
+
+            function day() {
+                document.querySelector('body').style.backgroundColor = 'white';
+                document.querySelector('body').style.color = 'black';
+                document.querySelectorAll('a').forEach(item => {
+                    item.style.color = 'black';
+                });
+            }
+        </script>
         <input
             type="button"
             id="dnbtn"
@@ -36,18 +53,11 @@
             onclick="
                 let button = this;
                 if (button.value === 'night') {
-                    document.querySelector('body').style.backgroundColor = 'black';
-                    document.querySelector('body').style.color = 'white';
+                    night();
                     button.value = 'day';
-                    document.querySelectorAll('a').map((item => {
-                        item.style.color = 'green'
-                    }))
-
                 } else {
-                    document.querySelector('body').style.backgroundColor = 'white';
-                    document.querySelector('body').style.color = 'black';
+                    day();
                     button.value = 'night';
-                    document.querySelectorAll('a').style.color = 'black';
                 }
         
             "
