@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WEB</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <script>
+            const mode = event => {
+                if (event.target.value === 'night') {
+                    document.querySelector('body').style.backgroundColor =
+                        'black';
+                    document.querySelector('body').style.color = 'white';
+                    document
+                        .querySelectorAll('a')
+                        .forEach(e => (e.style.color = 'white'));
+                    event.target.value = 'day';
+                } else {
+                    document.querySelector('body').style.backgroundColor =
+                        'white';
+                    document.querySelector('body').style.color = 'black';
+                    document
+                        .querySelectorAll('a')
+                        .forEach(e => (e.style.color = 'black'));
+                    event.target.value = 'night';
+                }
+            };
+        </script>
+        <input type="button" value="night" onclick="mode(event)" />
+        <h1><a href="index.html">WEB</a></h1>
+        <div id="container">
+            <ol>
+                <li><a href="1.html">HTML</a></li>
+                <li><a href="2.html">CSS</a></li>
+                <li><a href="3.html">JS</a></li>
+            </ol>
+            <div>
+                <h2>Welcome !</h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+                error iure deserunt asperiores laboriosam nihil similique
+                quisquam cum. Deleniti necessitatibus eius laudantium deserunt,
+                ea animi eum laboriosam! Magni, qui ipsam.
+            </div>
+        </div>
+    </body>
+</html>
