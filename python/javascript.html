@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const login = () => {
+                const id = prompt('아이디를 입력하세요!');
+                if (id === 'pyeonne') {
+                    alert(`${id}님 환영합니다!`);
+                } else {
+                    alert('누구임?');
+                }
+            };
+        </script>
+        <h1>Login</h1>
+        <input type="button" value="login" onclick="login()" />
+        <h1>Loop</h1>
+        <script>
+            let member = ['egoing', 'duru'];
+            for (let i = 0; i < member.length; i++) {
+                document.write(`<li>${member[i]}</li>`);
+            }
+
+            member = {
+                name: 'egoing',
+                city: 'seoul',
+                job: 'programmer',
+            };
+        </script>
+        <h1>Function</h1>
+        <script>
+            const sum = (a, b) => a + b;
+            console.log(sum(10, 20));
+        </script>
+        <h1>실습</h1>
+        <input
+            type="button"
+            value="할일 추가"
+            onclick="
+            let todo = prompt('할일을 입력해주세요');
+            let newTodo = document.createElement('li');
+            let newContent = document.createTextNode(todo)
+            newTodo.appendChild(newContent)
+            document.body.insertBefore(newTodo, document.querySelector('ol'))
+            
+        "
+        />
+        <ol></ol>
+    </body>
+</html>

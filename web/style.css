@@ -3,9 +3,12 @@
     background-size: cover;
 } */
 
-h1 {
+nav {
+    display: flex;
+    justify-content: space-between;
     border-bottom: 10px solid red;
     padding: 10px;
+    margin-bottom: 1rem;
 }
 
 #container {
@@ -16,4 +19,19 @@ h1 {
 a {
     text-decoration: none;
     color: black;
+}
+
+.btn-group {
+    margin-top: 1rem;
+}
+
+iframe {
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+#daumRoughmapContainer1648516362786 {
+    border-radius: 10px;
+    margin-top: 1rem;
+    width: 100%;
 }
