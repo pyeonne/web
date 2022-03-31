@@ -28,3 +28,7 @@ for member in members3:
 def sum(a, b):
     return a + b
 print(f'result: {sum(10, 20)}')
+
+todo_list = list(map(str, input('할일을 입력해주세요').split()))
+print(todo_list)
+
